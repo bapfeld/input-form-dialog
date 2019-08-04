@@ -124,7 +124,7 @@ def get_input(title, data, options=FormOptions()):
             widget.setValue(value)
             layout.addWidget(widget, row, 1)
             widgets[key] = widget
-        elif isinstance(value, basestring):
+        elif isinstance(value, str):
             widget = QtWidgets.QLineEdit(value)
             layout.addWidget(widget, row, 1)
             widgets[key] = widget
@@ -214,7 +214,7 @@ def get_input(title, data, options=FormOptions()):
             data[key] = widgets[key].color()
         elif isinstance(value, float) or isinstance(value, int):
             data[key] = widgets[key].value()
-        elif isinstance(value, basestring):
+        elif isinstance(value, str):
             data[key] = widgets[key].text()
         elif isinstance(value, list):
             if options.list_displays_as_radios:
