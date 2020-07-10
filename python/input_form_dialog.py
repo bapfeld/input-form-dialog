@@ -87,7 +87,7 @@ def get_input(title, data, options=FormOptions()):
     dialog.setWindowTitle(title)
     
     layout = QtWidgets.QGridLayout(dialog)
-    layout.setMargin(2)
+    layout.setContentsMargins(2, 2, 2, 2)
     layout.setSpacing(4)
     
     widgets = {}
@@ -132,7 +132,7 @@ def get_input(title, data, options=FormOptions()):
             if options.list_displays_as_radios:
                 widget = QtWidgets.QWidget()
                 widget_layout = QtWidgets.QHBoxLayout(widget)
-                widget_layout.setMargin(2)
+                widget_layout.setContentsMargins(2, 2, 2, 2)
                 widget_layout.setSpacing(2)
                 
                 is_checked = False
@@ -154,7 +154,7 @@ def get_input(title, data, options=FormOptions()):
         elif isinstance(value, QtGui.QVector2D) or isinstance(value, QtGui.QVector3D):
             widget = QtWidgets.QWidget()
             widget_layout = QtWidgets.QHBoxLayout(widget)
-            widget_layout.setMargin(2)
+            widget_layout.setContentsMargins(2, 2, 2, 2)
             widget_layout.setSpacing(2)
             
             x_widget = QtWidgets.QDoubleSpinBox()
@@ -189,7 +189,7 @@ def get_input(title, data, options=FormOptions()):
             raise ValueError('Data of type "{}" is not supported!'.format(value_type))
     
     button_layout = QtWidgets.QHBoxLayout()
-    button_layout.setMargin(2)
+    button_layout.setContentsMargins(2, 2, 2, 2)
     button_layout.setSpacing(2)
     layout.addLayout(button_layout, row + 1, 0, 1, 2)
     
