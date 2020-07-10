@@ -191,7 +191,7 @@ def get_input(title, data, options=FormOptions()):
     button_layout = QtWidgets.QHBoxLayout()
     button_layout.setContentsMargins(2, 2, 2, 2)
     button_layout.setSpacing(2)
-    layout.addLayout(button_layout, row + 1, 0, 1, 2)
+    layout.addLayout(button_layout, len(data) + 1, 0, 1, 2)
     
     ok_button = QtWidgets.QPushButton('Ok')
     ok_button.setDefault(True)
